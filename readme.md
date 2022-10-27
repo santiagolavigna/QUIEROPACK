@@ -1,2 +1,1 @@
-project designed for quieropack by 5 years ago (2017)
-, now it's time to update some stuffs :D
+project designed for quieropack by 5 years ago (2017), now it's time to update some stuffs :D
