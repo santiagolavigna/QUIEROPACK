@@ -341,3 +341,15 @@ input[type=file]{
     font-size: large;
     background-color: #FF6347;
 }
+@media print {
+  .sidebar, #header, .panel-heading{
+      display: none !important;
+  }
+  .page {
+   padding: 0;
+   position: absolute;
+  }
+  .no-visible{
+    display: none;
+  }
+}

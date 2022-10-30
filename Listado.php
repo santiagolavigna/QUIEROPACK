@@ -51,17 +51,17 @@
         <thead>
           <tr>
             <th class="text-center" style="width: 5%;">#</th>
-            <th>Caja</th>
-            <th class="text-center" style="width: 10%;">Formato pliego</th>
-            <th class="text-center" style="width: 10%;">Costo pliego</th>
-            <th class="text-center" style="width: 10%;">Subtotal lisa</th>
-            <th class="text-center" style="width: 10%;">Subtotal 1 color</th>
-            <th class="text-center" style="width: 10%;">Subtotal 2 colores</th>
-              <th class="text-center" style="width: 1%;">%IVA</th>
+            <th class="text-center" style="width: 10%;">Caja</th>
+            <th class="text-center no-visible" style="width: 10%;">Formato pliego</th>
+            <th class="text-center no-visible" style="width: 10%;">Costo pliego</th>
+            <th class="text-center no-visible" style="width: 10%;">Subtotal lisa</th>
+            <th class="text-center no-visible" style="width: 10%;">Subtotal 1 color</th>
+            <th class="text-center no-visible" style="width: 10%;">Subtotal 2 colores</th>
+            <th class="text-center no-visible" style="width: 1%;">%IVA</th>
             <th class="text-center" style="width: 10%;">Subtotal lisa + %IVA </th>
             <th class="text-center" style="width: 10%;">Subtotal 1 color + %IVA </th>
             <th class="text-center" style="width: 10%;">Subtotal 2 colores + %IVA </th>
-            <th class="text-center" style="width: 100px;">Acciones</th>
+            <th class="text-center no-visible" style="width: 100px;">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -73,30 +73,30 @@
            <?php if ( ((int) remove_junk(ucwords($var[12]))) === 0): ?>
                 <td class=""><?php echo $var[1]?></td>
            <?php elseif  ( ($var[14]) === '0.425'): ?>
-              <td class="label-danger"><?php echo $var[1]?></td>
+              <td class="label-danger "><?php echo $var[1]?></td>
            <?php else: ?>
              <td class="label-success"><?php echo $var[1]?></td>
            <?php endif; ?>
          
            
-           <td class="text-center">
+           <td class="text-center no-visible">
            
               <span class="label label-success"><?php echo remove_junk(ucwords($var[5])) ?></span>
            </td>
             
-           <td class="text-center">   
+           <td class="text-center no-visible">   
             <span class="label label-success"><?php echo remove_junk(ucwords($var[11])) ?></span>
            </td>
-           <td class="text-center">   
+           <td class="text-center no-visible">   
             <span class="label label-success"><?php echo remove_junk(ucwords($var[2])) ?></span>
-           <td class="text-center">   
+           <td class="text-center no-visible">   
             <span class="label label-success"><?php echo remove_junk(ucwords($var[3])) ?></span>
            </td>
          
-           <td class="text-center">   
+           <td class="text-center no-visible">   
             <span class="label label-success"><?php echo remove_junk(ucwords($var[4])) ?></span>
            </td>
-               <td class="text-center">   
+               <td class="text-center no-visible">   
             <span class=""><?php echo remove_junk(ucwords($var[10])) ?></span>
            </td>
            <td class="text-center">   
@@ -108,7 +108,7 @@
            <td class="text-center">   
             <span class="label label-success"><?php echo remove_junk(ucwords($var[9])) ?></span>
            </td>
-           <td class="text-center">
+           <td class="text-center no-visible">
              <div class="btn-group">                
                 <a href="Edit_listado.php?id=<?php echo (int)$var[0];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                   <i class="glyphicon glyphicon-pencil"></i>
