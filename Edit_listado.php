@@ -105,9 +105,9 @@
   
                             <label for="cajas_cj">Metros</label>
                           <select class="form-control" name="me" style="width: 300px;" required="">
-                               <option value="<?php echo $datos_actuales['id_metro'] ?>"><?php echo $datos_actuales['metro_nombre'] ?></option>
+                               <option value="<?php echo $datos_actuales['id_metro'] ?>"><?php echo $datos_actuales['metro_nombre'] . " - $" . $datos_actuales['metro_price'] ?></option>
                              <?php  foreach ($metros as $m): ?>
-                               <option value="<?php echo $m['id'] ?>"><?php echo $m['nombre'] ?></option>
+                               <option value="<?php echo $m['id'] ?>"><?php echo $m['nombre'] . " - $" . $m['precio'] ?></option>
                              <?php endforeach; ?>
                           </select> 
                    
@@ -123,25 +123,25 @@
                    
                         <label for="cajas_cj">Troquelado</label>
                     <select class="form-control" name="tr" style="width: 300px;" required="">
-                      <option value="<?php echo $datos_actuales['id_troquelado'] ?>"><?php echo $datos_actuales['troquelado_price'] ?></option>
+                      <option value="<?php echo $datos_actuales['id_troquelado'] ?>"><?php echo $datos_actuales['troquelado_name'] . " - $" . $datos_actuales['troquelado_price'] ?></option>
                     <?php  foreach ($troquelados as $t): ?>
-                      <option value="<?php echo $t['id'] ?>"><?php echo $t['precio'] ?></option>
+                      <option value="<?php echo $t['id'] ?>"><?php echo $t['descripcion'] . " - $" . $t['precio'] ?></option>
                     <?php endforeach; ?>
                     </select>
-                    
+
                         <label for="cajas_cj">Empaquetado</label>
                     <select class="form-control" name="em" style="width: 300px;" required="">
-                      <option value="<?php echo $datos_actuales['id_empaquetado'] ?>"><?php echo $datos_actuales['empaquetado_price'] ?></option>
+                      <option value="<?php echo $datos_actuales['id_empaquetado'] ?>"><?php  echo $datos_actuales['empaquetado_name'] . " - $" . $datos_actuales['empaquetado_price'] ?></option>
                     <?php  foreach ($empaquetados as $em): ?>
-                      <option value="<?php echo $em['id'] ?>"><?php echo $em['precio'] ?></option>
+                      <option value="<?php echo $em['id'] ?>"><?php echo  $em['descripcion'] . " - $" . $em['precio'] ?></option>
                     <?php endforeach; ?>
                     </select>
                         
                         <label for="cajas_cj">Puesta</label>
                     <select class="form-control" name="pu" style="width: 300px;" required="">
-                      <option value="<?php echo $datos_actuales['id_puesta'] ?>"><?php echo $datos_actuales['puesta_price'] ?></option>
+                      <option value="<?php echo $datos_actuales['id_puesta'] ?>"><?php echo $datos_actuales['puesta_name'] . " - $" . $datos_actuales['puesta_price'] ?></option>
                     <?php  foreach ($puestas as $pu): ?>
-                      <option value="<?php echo $pu['id'] ?>"><?php echo $pu['precio'] ?></option>
+                      <option value="<?php echo $pu['id'] ?>"><?php echo $pu['descripcion'] . " - $" .$pu['precio'] ?></option>
                     <?php endforeach; ?>
                     </select>
                         
@@ -161,21 +161,20 @@
                     <?php endforeach; ?>
                     </select>
                         
-                          
                         <label for="cajas_cj">$ Pegamento</label>
-                    <select class="form-control" name="pega" style="width: 300px;" >
-                        <option value="<?php echo $datos_actuales['id_pegamentos'] ?>"><?php echo get_precio_pegamento($datos_actuales['precio_kilo'],$dolar,$datos_actuales['pegamento_cantidad'],$datos_actuales['porcentaje']) ?></option>
+                    <select class="form-control" name="pega" style="width: 300px;" >                   
+                        <option value="<?php echo $datos_actuales['id_pegamentos'] ?>"><?php echo $datos_actuales['pegamento_name'] . " - $" . get_precio_pegamento($datos_actuales['precio_kilo'],$dolar,$datos_actuales['pegamento_cantidad'],$datos_actuales['porcentaje']) ?></option>
                     <?php  foreach ($pegamentos as $tc): ?>
-                      <option value="<?php echo $tc['id'] ?>"><?php echo get_precio_pegamento($tc['precio_kilo'],$dolar,$tc['cantidad'],$tc['porcentaje']) ?></option>
+                      <option value="<?php echo $tc['id'] ?>"><?php echo $tc['descripcion'] . " - $" . get_precio_pegamento($tc['precio_kilo'],$dolar,$tc['cantidad'],$tc['porcentaje']) ?></option>
                     <?php endforeach; ?>
                     </select>
                         
                           
                         <label for="cajas_cj">$ Pegado</label>
                     <select class="form-control" name="p" style="width: 300px;" >
-                      <option value="<?php echo $datos_actuales['id_pegados'] ?>"><?php echo $datos_actuales['pegados_price'] ?></option>
-                    <?php  foreach ($pegados as $tc): ?>
-                      <option value="<?php echo $tc['id'] ?>"><?php echo $tc['precio'] ?></option>
+                      <option value="<?php echo $datos_actuales['id_pegados'] ?>"><?php echo $datos_actuales['pegado_name'] . " - $" . $datos_actuales['pegados_price'] ?></option>
+                    <?php  foreach ($pegados as $pgd): ?>
+                      <option value="<?php echo $pgd['id'] ?>"><?php echo $pgd['descripcion'] . " - $" . $pgd['precio'] ?></option>
                     <?php endforeach; ?>
                     </select>
                       <br>
